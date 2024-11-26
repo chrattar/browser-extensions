@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Simple Color Changer",
+  "version": "1.0",
+  "description": "Change page colors",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "simplecolors@example.com"
+    }
+  },
+  "permissions": ["activeTab", "storage"],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://news.ycombinator.com/*"],
+    "js": ["content.js"]
+  }]
+}
